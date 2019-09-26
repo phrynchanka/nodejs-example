@@ -7,5 +7,5 @@ groups:
     labels:
       severity: alert
     annotations:
-      summary: Instance {{ $labels.instance }}: Elasticsearch instance status is not 1
-      description: This server's Elasticsearch instance status has a value of {{ $value }}.
+      summary: 'Instance {{ $labels.instance }}: Elasticsearch instance status is not 1'
+      description: 'This server's Elasticsearch instance status has a value of {{ $value }}.'
