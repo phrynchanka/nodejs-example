@@ -2,7 +2,7 @@ groups:
   - name: elasticsearch
     rules:
       - alert: Elastic_UP
-        expr: IF elasticsearch_up{job="elasticsearch"} != 1
+        expr: elasticsearch_up{job="elasticsearch"} != 1
         for: 120s
         labels:
           severity: alert
