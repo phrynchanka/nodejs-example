@@ -1,11 +1,11 @@
 groups:
-  - name: elasticsearch
-    rules:
-      - alert: Elastic_UP
-        expr: elasticsearch_up{job="elasticsearch"} != 1
-        for: 120s
-        labels:
-          severity: alert
-        annotations:
-          summary: 'Instance {{ $labels.instance }}: Elasticsearch instance status is not 1'
-          description: 'This server's Elasticsearch instance status has a value of {{ $value }}.'
+- name: elasticsearch
+  rules:
+  - alert: Elastic_UP
+    expr: elasticsearch_up{job="elasticsearch"} != 1
+    for: 120s
+    labels:
+      severity: alert
+    annotations:
+      summary: Instance {{ $labels.instance }}: Elasticsearch instance status is not 1
+      description: This server's Elasticsearch instance status has a value of {{ $value }}.
