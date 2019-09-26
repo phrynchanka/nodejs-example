@@ -15,5 +15,5 @@ groups:
     labels:
       severity: alert
     annotations:
-      description: Instance {{ $labels.instance }}: not all primary and replica shards are allocated in elasticsearch cluster {{ $labels.cluster }}.
-      summary: Instance {{ $labels.instance }}: not all primary and replica shards are allocated in elasticsearch cluster {{ $labels.cluster }}
+      description: There are only {{$value}} Red
+      summary: Red
