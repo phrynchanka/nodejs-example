@@ -9,3 +9,11 @@ groups:
     annotations:
       description: There are only {{$value}} < 3 ElasticSearch nodes running
       summary: ElasticSearch running on less than 3 node
+  - alert: Elastic_UP
+    expr: elasticsearch_up{job="elasticsearch"} != 1
+    for: 120s
+    labels:
+      severity: alert
+    annotations:
+      description: This server's Elasticsearch instance status has a value of {{ $value }}.
+      summary: Instance {{ $labels.instance }}: Elasticsearch instance status is not 1
